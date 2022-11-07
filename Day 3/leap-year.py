@@ -10,9 +10,16 @@ second_last = int(n_year[2])
 # print(last_value)
 # print(second_last)
 
-if (((last_value and second_last) == 0) and (year % 4 == 0) and (year % 100 == 0) and (year % 400 == 0)):
+# if (((last_value and second_last) == 0) and (year % 4 == 0) and (year % 100 == 0) and (year % 400 == 0)):
+#     print("Leap year")
+# elif(((last_value or second_last) != 0) and (year % 4 == 0)):
+#     print("Leap year")
+# else:
+#     print("Not Leap year")
+
+if ((year % 100 == 0) and (year % 400 == 0)):
     print("Leap year")
-elif(((last_value or second_last) != 0) and (year % 4 == 0)):
+elif((year % 100 != 0) and (year % 4 == 0)):
     print("Leap year")
 else:
     print("Not Leap year")
