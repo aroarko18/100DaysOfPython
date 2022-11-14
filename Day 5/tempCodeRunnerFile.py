@@ -1,3 +1,4 @@
-print(inputs) # display the list.
-# print(lenghts)
-# print(heights)
+updated_pass = ''
+for new_pass in password:
+    updated_pass = updated_pass +  new_pass
+print(updated_pass)
