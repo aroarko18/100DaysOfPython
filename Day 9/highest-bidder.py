@@ -1,8 +1,10 @@
-# import os
-
-
-def clear():
-   os.system("clear")
+import sys, subprocess
+def clear_screen():
+    operating_system = sys.platform
+    if operating_system == 'win32':
+        subprocess.run('cls', shell=True)
+    elif operating_system == 'linux' or operating_system == 'darwin':
+        subprocess.run('clear', shell=True)
 
 logo = '''
                          ___________
@@ -40,7 +42,7 @@ while still_bidder:
     still_continue = input("Are there any other bidders? Type 'yes'  or 'no'.\n")
     if still_continue == "no":
         still_bidder = False
-    # elif still_bidder == "yes":
-    #     clear()
+    elif still_continue == "yes":
+        clear_screen()
 
 bid_result(bids)
