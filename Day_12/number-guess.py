@@ -39,7 +39,7 @@ while should_run:
         print("Too low.")
         print("Guess again")
         attempts -= 1
-    if attempts >= 1:
+    if attempts >= 1 and guess != number:
         print(f"You have {attempts} attempts remaining to guess the number.")
     if attempts == 0:
         print("You have run out of guesses, you lose.")
