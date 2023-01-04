@@ -1,1 +1,2 @@
-name
+
+    print(art.logo)
