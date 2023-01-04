@@ -4,8 +4,9 @@ import random
 import os
 
 
-#display art
+# display art
 print(art.logo)
+
 
 def format_data(account):
     """Takes data of the account and return it for printing"""
@@ -14,18 +15,20 @@ def format_data(account):
     account_country = account["country"]
     return f"{account_name}, a {account_desc}, from {account_country}"
 
+
 def check_answer(guess, follower_a, follower_b):
     if follower_a > follower_b:
         return guess == "a"
     else:
         return guess == "b"
 
+
 should_continue = True
 account_b = random.choice(data)
 score = 0
 
 while should_continue:
-    #account
+    # account
     account_a = account_b
     account_b = random.choice(data)
     if account_a == account_b:
@@ -35,7 +38,6 @@ while should_continue:
     # art --- vs
     print(art.vs)
     print(f"Against B: {format_data(account_b)}")
-
 
     guess = input("Who has more follower? ").lower()
     follower_count_a = account_a["follower_count"]
